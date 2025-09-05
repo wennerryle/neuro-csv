@@ -1,0 +1,6 @@
+{
+    "$schema": "neuro-csv.schema.json",
+    "instruction-file": "./instructions.txt",
+    "structured-output-file": "./instruction.schema.json",
+    "columns-for-analyze": ["animal"]
+}
