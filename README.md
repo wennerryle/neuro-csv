@@ -2,7 +2,11 @@
 
 A CSV postprocessor.
 
+<center>
+
 ![Preview](./assets/preview.png)
+
+</center>
 
 ## Why?
 
