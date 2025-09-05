@@ -1,3 +1,49 @@
 {
-    
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "minLength": 1,
+      "description": "LM Studio model identifier"
+    },
+    "base-url": {
+      "type": "string",
+      "minLength": 1,
+      "format": "uri",
+      "description": "URL of LM Studio server",
+      "default": "ws://localhost:1234"
+    },
+    "structured-output-file": {
+      "type": "string",
+      "minLength": 1,
+      "description": "A path to file that contains JSON Schema for structured output"
+    },
+    "instructions-file": {
+      "type": "string",
+      "minLength": 1,
+      "description": "A path to file that contains instructions for AI"
+    },
+    "slice": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\d+\\-\\d+"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "description": "Takes only rows specified in slice. Maybe be useful for debugging"
+    }
+  },
+  "required": [
+    "model",
+    "structured-output-file",
+    "instructions-file"
+  ]
 }
