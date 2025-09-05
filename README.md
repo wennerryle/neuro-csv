@@ -20,6 +20,7 @@ I couldn't find a free solutions that implement something like [COPILOT function
 - Have a userfriendly JSON configuration file with JSON schema.
 - Have a userfriendly CLI
 - Have a JSON schema interface for structured output direct into columns
+- Have a progress bar with an approximate end time
 
 ## Recomendations
 
